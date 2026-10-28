@@ -6,12 +6,21 @@ def add_one(number):
                                 # เขียนต่อได้เลยโดยไม่ต้องมี if __name__ ...
 my_var = 5
 print("ก่อน:", my_var)
-add_one(my_var)
+my_var=add_one(my_var)  
 print("หลัง:", my_var)
 
 
+'''    var is not added by 1
+def add_one(number):
+    return number + 1
 
+                                # เขียนต่อได้เลยโดยไม่ต้องมี if __name__ ...
+my_var = 5
+print("ก่อน:", my_var)
+add_one(my_var)  
+print("หลัง:", my_var)
 
+'''
 
 
 '''
