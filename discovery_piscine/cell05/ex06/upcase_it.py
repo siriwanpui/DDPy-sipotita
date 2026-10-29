@@ -1,17 +1,28 @@
 #!/usr/bin/env python3
 import sys
 
-                                        # 1. เช็กจำนวนพารามิเตอร์ที่ส่งเข้ามา 
-                                        # จำนวนพารามิเตอร์ที่แท้จริงคือ len(sys.argv) - 1
-                                        # โจทย์ระบุว่า "If the number of parameters is different from 1..." (ถ้าจำนวนไม่ใช่ 1)
-if len(sys.argv) - 1 != 1:
-    print("none")
-else:
-                                        # 2. ถ้าส่งมา 1 ตัวพอดี ให้ดึงข้อความจากดัชนีที่ 1 (sys.argv) 
-                                        # แล้วแปลงเป็นตัวพิมพ์ใหญ่ด้วย Method .upper()
-    result = sys.argv[1].upper()
-    print(result)
+def main():
+    # 1. ตรวจสอบจำนวน Parameter ที่ส่งเข้ามา (sys.argv)
+    # sys.argv[0] คือชื่อไฟล์ ดังนั้นถ้าส่ง string มา 1 ตัว len(sys.argv) ต้องเท่ากับ 2
+    if len(sys.argv) != 2:
+        print("none")
+        return
 
+    # 2. ดึงข้อความจาก parameter ตัวแรกมาใช้งาน
+    input_string = sys.argv[1]
+    
+    # 3. นับจำนวนตัวอักษร 'z' (พิมพ์เล็กเท่านั้นตามตัวอย่างโจทย์)
+    z_count = input_string.count('z')
+    
+    # 4. แสดงผลลัพธ์ตามเงื่อนไข
+    if z_count == 0:
+        print("none")
+    else:
+        # พิมพ์ตัว 'z' ซ้ำกันตามจำนวนที่นับได้ (เช่น 'z' * 3 จะได้ 'zzz')
+        print('z' * z_count)
+
+if __name__ == '__main__':
+    main()
 
 
 
